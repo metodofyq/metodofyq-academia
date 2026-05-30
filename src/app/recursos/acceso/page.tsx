@@ -1,6 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, Download, BookOpen, FileText } from "lucide-react";
 
@@ -58,8 +59,15 @@ export default function AccesoRecursosPage() {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-blue-900">
-            Método FyQ
+          <Link href="/" className="h-10 w-auto flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Método FyQ"
+              width={200}
+              height={24}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
           <Link href="/recursos" className="flex items-center gap-2 text-blue-900 hover:text-blue-800">
             <ChevronLeft size={20} />
