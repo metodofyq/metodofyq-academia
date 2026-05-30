@@ -14,7 +14,7 @@ export default function FAQ() {
     },
     {
       q: "¿El curso es válido para cualquier comunidad autónoma?",
-      a: "Sí. Los simulacros y materiales se adaptan a las convocatorias específicas de tu comunidad autónoma, con temas y criterios de evaluación propios.",
+      a: "Sí. Los simulacros y materiales se adaptan a la convocatoria de tu comunidad autónoma y sus correspondientes rúbricas de corrección, de las 4 pruebas.",
     },
     {
       q: "¿Cómo funciona la corrección de ejercicios y temas?",
@@ -24,33 +24,29 @@ export default function FAQ() {
       q: "¿Puedo comprar solo una prueba si ya tengo otras preparadas?",
       a: "Sí. Puedes contratar únicamente la prueba que necesitas: Temas, Problemas, Programación o Defensa, por 450 € cada una.",
     },
-    {
-      q: "¿Y si suspendo la oposición después de la preparación?",
-      a: "Es algo que puede ocurrir. Si has cumplido el 90% de las tareas propuestas, te devolvemos el dinero o renuevas la preparación para la próxima convocatoria.",
-    },
   ];
 
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-20 px-6 bg-gray-50">
+    <section id="faq" className="py-20 px-6 bg-blue-900 text-white">
       <div className="max-w-3xl mx-auto">
-        <h3 className="text-sm font-semibold text-blue-900 mb-4">10 — FAQ</h3>
-        <h2 className="text-4xl font-bold text-gray-900 mb-12">
-          Lo que nos <span className="text-blue-500">preguntan más</span>
+        <h3 className="text-sm font-semibold text-blue-200 mb-4">10 — FAQ</h3>
+        <h2 className="text-4xl font-bold text-white mb-12">
+          Lo que nos <span className="text-cyan-300">preguntan más</span>
         </h2>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
-            <div key={i} className="border border-gray-300 rounded-lg overflow-hidden">
+            <div key={i} className="border border-blue-700 rounded-lg overflow-hidden">
               <button
                 onClick={() => setActive(active === i ? null : i)}
-                className="w-full text-left px-6 py-4 bg-white hover:bg-gray-50 font-semibold text-gray-900 flex justify-between items-center"
+                className="w-full text-left px-6 py-4 bg-blue-800 hover:bg-blue-700 font-semibold text-white flex justify-between items-center"
               >
                 {faq.q}
                 <span>{active === i ? "−" : "+"}</span>
               </button>
               {active === i && (
-                <div className="px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-300">
+                <div className="px-6 py-4 bg-blue-900 text-blue-100 border-t border-blue-700">
                   {faq.a}
                 </div>
               )}

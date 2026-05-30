@@ -25,17 +25,17 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-20 px-6 bg-blue-900 text-white">
       <div className="max-w-5xl mx-auto">
-        <h3 className="text-sm font-semibold text-blue-900 mb-4">03 — LO QUE HACEMOS</h3>
-        <h2 className="text-4xl font-bold text-gray-900 mb-12">Como academia 100% online</h2>
+        <h3 className="text-sm font-semibold text-blue-200 mb-4">03 — LO QUE HACEMOS</h3>
+        <h2 className="text-4xl font-bold text-white mb-12">Como academia 100% online</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {differences.map((section) => (
             <div key={section.title}>
-              <h4 className="text-xl font-bold text-gray-900 mb-6">{section.title}</h4>
+              <h4 className="text-xl font-bold text-white mb-6">{section.title}</h4>
               <ul className="space-y-4">
                 {section.items.map((item) => (
-                  <li key={item} className="text-gray-700">{item}</li>
+                  <li key={item} className="text-blue-100">{item}</li>
                 ))}
               </ul>
             </div>

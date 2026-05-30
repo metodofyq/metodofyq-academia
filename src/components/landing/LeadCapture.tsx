@@ -42,43 +42,43 @@ export default function LeadCapture() {
   };
 
   return (
-    <section className="py-20 px-6 bg-blue-900 text-white">
+    <section className="py-20 px-6 bg-white">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-4">
+        <h2 className="text-4xl font-bold mb-4 text-gray-900">
           ¿Listo para prepararte <span className="italic">de verdad</span>?
         </h2>
-        <p className="text-blue-200 mb-12">
+        <p className="text-gray-600 mb-12">
           Las plazas son limitadas y se abren el 1 de junio.
           <br />
           No esperes al último momento — los que empiezan antes llegan más descansados.
         </p>
 
         {success && (
-          <div className="mb-6 p-4 bg-green-500 rounded-lg">
+          <div className="mb-6 p-4 bg-green-100 text-green-800 rounded-lg">
             ✓ Correo guardado correctamente. Te contactaremos pronto.
           </div>
         )}
 
         {error && (
-          <div className="mb-6 p-4 bg-red-500 rounded-lg">
+          <div className="mb-6 p-4 bg-red-100 text-red-800 rounded-lg">
             ✗ {error}
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4 bg-blue-800 p-8 rounded-lg">
+        <form onSubmit={handleSubmit} className="space-y-4 bg-gray-100 p-8 rounded-lg">
           <input
             type="email"
             placeholder="Tu correo electrónico"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full px-4 py-3 rounded text-gray-900"
+            className="w-full px-4 py-3 rounded text-gray-900 bg-white border border-gray-300"
           />
           <select
             value={ccaa}
             onChange={(e) => setCcaa(e.target.value)}
             required
-            className="w-full px-4 py-3 rounded text-gray-900"
+            className="w-full px-4 py-3 rounded text-gray-900 bg-white border border-gray-300"
           >
             <option value="">Selecciona tu comunidad autónoma</option>
             {CCAA_OPTIONS.map((c) => (
@@ -88,7 +88,7 @@ export default function LeadCapture() {
           <select
             value={situacion}
             onChange={(e) => setSituacion(e.target.value)}
-            className="w-full px-4 py-3 rounded text-gray-900"
+            className="w-full px-4 py-3 rounded text-gray-900 bg-white border border-gray-300"
           >
             <option value="">Tu situación (opcional)</option>
             <option value="primer-vez">Es mi primer intento</option>
@@ -98,7 +98,7 @@ export default function LeadCapture() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-white text-blue-900 font-bold py-3 rounded hover:bg-blue-100 disabled:opacity-50"
+            className="w-full bg-blue-900 text-white font-bold py-3 rounded hover:bg-blue-800 disabled:opacity-50"
           >
             {loading ? "Enviando..." : "Quiero una plaza"}
           </button>

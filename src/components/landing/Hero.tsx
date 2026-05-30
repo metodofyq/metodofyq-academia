@@ -31,7 +31,7 @@ export default function Hero() {
           </div>
         </div>
         <button className="bg-blue-900 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-800">
-          Ver todos los detalles
+          Descarga nuestros recursos gratuitos
         </button>
       </div>
     </section>

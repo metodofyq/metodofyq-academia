@@ -13,7 +13,7 @@ export default function Comparison() {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-20 px-6 bg-white">
       <div className="max-w-5xl mx-auto">
         <h3 className="text-sm font-semibold text-blue-900 mb-4">06 — COMPARATIVA</h3>
         <h2 className="text-4xl font-bold text-gray-900 mb-12">

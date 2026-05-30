@@ -13,19 +13,19 @@ export default function WhatIncludes() {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 bg-blue-900 text-white">
       <div className="max-w-5xl mx-auto">
-        <h3 className="text-sm font-semibold text-blue-900 mb-4">07 — QUÉ INCLUYE</h3>
-        <h2 className="text-4xl font-bold text-gray-900 mb-12">
+        <h3 className="text-sm font-semibold text-blue-200 mb-4">07 — QUÉ INCLUYE</h3>
+        <h2 className="text-4xl font-bold text-white mb-12">
           Todo lo que necesitas en este camino.
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {features.map((f) => (
             <div key={f.num} className="text-center">
-              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <p className="font-bold text-blue-900 text-lg">{f.num}</p>
+              <div className="bg-blue-700 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 border border-blue-500">
+                <p className="font-bold text-white text-lg">{f.num}</p>
               </div>
-              <p className="text-gray-900 font-semibold text-sm">{f.title}</p>
+              <p className="text-white font-semibold text-sm">{f.title}</p>
             </div>
           ))}
         </div>
