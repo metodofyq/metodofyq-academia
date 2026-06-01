@@ -48,7 +48,9 @@ export default async function DashboardPage() {
     .from('profiles')
     .select('full_name')
     .eq('id', user.id)
-    .single()
+    .single() as { data: { full_name: string | null } | null }
+
+  const firstName = profile?.full_name?.split(' ')[0] ?? 'estudiante'
 
   // Progress overview
   const { data: topicProgress, count: topicsStarted } = await supabase
@@ -74,7 +76,7 @@ export default async function DashboardPage() {
     <div className="max-w-4xl mx-auto space-y-8">
       <div>
         <h1 className="text-2xl font-bold capitalize">
-          Hola, {profile?.full_name?.split(' ')[0] ?? 'estudiante'} 👋
+          Hola, {firstName} 👋
         </h1>
         <p className="text-muted-foreground capitalize">{todayLabel}</p>
       </div>
