@@ -1,15 +1,8 @@
-"use client";
-
-import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, Download, BookOpen, FileText } from "lucide-react";
+import { ChevronLeft, Download, FileText } from "lucide-react";
 
 export default function AccesoRecursosPage() {
-  const searchParams = useSearchParams();
-  const email = searchParams.get("email") || "";
-  const ccaa = searchParams.get("ccaa") || "";
-
   const recursos = [
     {
       id: 1,
@@ -82,13 +75,13 @@ export default function AccesoRecursosPage() {
         <div className="mb-16">
           <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white rounded-2xl p-8 md:p-12">
             <h1 className="text-4xl font-bold mb-3">
-              ¡Hola{email ? `, ${email.split("@")[0]}` : ""}! 🎉
+              ¡Hola! 🎉
             </h1>
             <p className="text-xl text-blue-100 mb-4">
-              Aquí están tus recursos gratuitos personalizados para {ccaa || "tu comunidad autónoma"}.
+              Aquí están tus recursos gratuitos para comenzar tu preparación.
             </p>
             <p className="text-blue-200">
-              Descarga ahora y comienza tu preparación con el método que ha ayudado a cientos de estudiantes a aprobar.
+              Descarga ahora y comienza con el método que ha ayudado a cientos de estudiantes a aprobar.
             </p>
           </div>
         </div>
@@ -192,7 +185,7 @@ export default function AccesoRecursosPage() {
         {/* Footer Info */}
         <div className="text-center text-gray-600 text-sm">
           <p>
-            Estos recursos son gratuitos y se enviaron a <span className="font-semibold">{email}</span>
+            Estos recursos son gratuitos y están disponibles para todos nuestros usuarios
           </p>
           <p className="mt-2">
             ¿Preguntas? Contactanos en <span className="text-blue-900 font-semibold">hola@metodofyq.com</span>
